@@ -1,2 +1,2 @@
-file_count=$(ls -1 | wc -l)
-echo "$file_count"
+#!/bin/bash
+ls -1 | wc -l
