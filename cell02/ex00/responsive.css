@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+}
+div:first-child {
+    display: grid; 
+    grid-template-columns: 50% 50%; 
+    height: 100vh;
+}
+div > div {
+    display: flex;
+    align-items: center;
+}
