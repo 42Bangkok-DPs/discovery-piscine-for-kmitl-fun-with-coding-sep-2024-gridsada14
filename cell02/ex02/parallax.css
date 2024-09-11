@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+
+    color: white;
+    font-size: medium;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-image {
+    height: 1080px;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+#first {
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/241/594/436/retrowave-neon-digital-art-retro-style-wallpaper-preview.jpg);
+}
+
+#second {
+    background-image: url(https://img.pikbest.com/backgrounds/20190725/retro-sci-fi-background-futuristic-grid-landscape-of-the-1980-background-v_1508390jpg!w700wp);
+}
+
+.bar {
+    background-color: black;
+    height: 300px;
+}
+

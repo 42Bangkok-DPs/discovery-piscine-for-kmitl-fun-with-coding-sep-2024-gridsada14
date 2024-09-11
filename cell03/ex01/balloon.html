@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #balloon {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+    </style>
+
+    <script>
+        document.getElementById("balloon").style.width += '10px';
+        document.getElementById("balloon").style.height += '10px';
+        
+    </script>
+
+</head>
+<body>
+
+    <div id="container">
+        <div id="balloon"></div>
+    </div>
+
+</body>
+</html>
