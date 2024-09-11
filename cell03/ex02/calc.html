@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's over 9000</title>
+
+    <script>
+        function calculate() {
+            var left = document.getElementById('left').value;
+            var right = document.getElementById('right').value;
+            var operator = document.getElementById('operator').value;
+
+            if (isNaN(left) || isNaN(right) || left < 0 || right < 0 || right.length == 0 || left.length == 0) {
+                alert('Error :(');
+                return;
+            }
+            
+            switch (operator) {
+                case '+':
+                    var result = (parseInt(left)) + (parseInt(right));
+                    break;
+                case '-':
+                    var result = (parseInt(left)) - parseInt(right);
+                    break;
+                case '*':
+                    var result = (parseInt(left)) * parseInt(right);
+                    break;
+                case '/':
+                    if (parseInt(right) === 0) {
+                        alert("It's over 9000!");
+                        return;
+                    }
+                    var result = (parseInt(left)) / parseInt (right);
+                    break;
+                case '%':
+                    if (parseInt(right) === 0) {
+                        alert("It's over 9000!");
+                        return;
+                    }
+                    var result = (parseInt(left)) % parseInt (right);
+                    break;
+                default:
+                    alert('Invalid operator');
+                    return;
+            }
+
+            console.log('Result:', result);
+            alert('Result: ' + result)
+        }
+        
+        setInterval(function () {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+
+</head>
+<body>
+
+    <label for="left">Left operand:</label>
+    <input type="text" id="left" placeholder="Enter a positive integer">
+
+    <label for="operator">Operator:</label>
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+
+    <label for="right">Right operand:</label>
+    <input type="text" id="right" placeholder="Enter a positive integer">
+
+    <input type="button" value="Try Me!" onclick="calculate()">
+
+</body>
+</html>
