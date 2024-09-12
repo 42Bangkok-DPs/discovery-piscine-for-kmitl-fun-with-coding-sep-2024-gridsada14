@@ -13,6 +13,7 @@
 
             if (isNaN(left) || isNaN(right) || left < 0 || right < 0 || right.length == 0 || left.length == 0) {
                 alert('Error :(');
+                console.log('Error :(');
                 return;
             }
             
@@ -29,6 +30,7 @@
                 case '/':
                     if (parseInt(right) === 0) {
                         alert("It's over 9000!");
+                        console.log("It's over 9000!");
                         return;
                     }
                     var result = (parseInt(left)) / parseInt (right);
@@ -36,12 +38,14 @@
                 case '%':
                     if (parseInt(right) === 0) {
                         alert("It's over 9000!");
+                        console.log("It's over 9000!");
                         return;
                     }
                     var result = (parseInt(left)) % parseInt (right);
                     break;
                 default:
-                    alert('Invalid operator');
+                    alert("Invalid operator");
+                    console.log("It's over 9000!");
                     return;
             }
 
