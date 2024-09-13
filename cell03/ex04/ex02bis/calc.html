@@ -9,11 +9,13 @@
     <script>
         $(document).ready(function() {
             function calculate() {
-                var left = $('#left').val();
-                var right = $('#right').val();
+                var left = Number($('#left').val());
+                var right = Number($('#right').val());
                 var operator = $('#operator').val();
 
-                if (isNaN(left) || isNaN(right) || left < 0 || right < 0 || right.length == 0 || left.length == 0) {
+                console.log((Number.isInteger(parseInt(left))));
+
+                if (isNaN(left) || isNaN(right) || right.length == 0 || left.length == 0 || !Number.isInteger(left) || !Number.isInteger(right)) {
                     alert('Error :(');
                     console.log('Error :(');
                     return;
@@ -22,29 +24,29 @@
                 var result;
                 switch (operator) {
                     case '+':
-                        result = (parseInt(left)) + (parseInt(right));
+                        result = left + right;
                         break;
                     case '-':
-                        result = (parseInt(left)) - parseInt(right);
+                        result = left - right;
                         break;
                     case '*':
-                        result = (parseInt(left)) * (parseInt(right));
+                        result = left * right;
                         break;
                     case '/':
-                        if (parseInt(right) === 0) {
+                        if (right === 0) {
                             alert("It's over 9000!");
                             console.log("It's over 9000!");
                             return;
                         }
-                        result = (parseInt(left)) / parseInt(right);
+                        result = left / right;
                         break;
                     case '%':
-                        if (parseInt(right) === 0) {
+                        if (right === 0) {
                             alert("It's over 9000!");
                             console.log("It's over 9000!");
                             return;
                         }
-                        result = (parseInt(left)) % parseInt(right);
+                        result = (left % right);
                         break;
                     default:
                         alert("Invalid operator");

@@ -29,7 +29,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            let colors = ['red', 'green', 'blue'];
+            let colors = ['red', 'green', 'blue', 'black'];
             let colorIndex = 0;
             let size = 200;
 
@@ -38,7 +38,7 @@
                 if (size > 420) {
                     size = 200;
                 }
-                colorIndex = (colorIndex + 1) % 3;
+                colorIndex = (colorIndex + 1) % 4;
                 $('#balloon').css({
                     'width': size + 'px',
                     'height': size + 'px',
@@ -49,7 +49,7 @@
             function shrink() {
                 if (size > 200) {
                     size -= 5;
-                    colorIndex = (colorIndex + 2) % 3;
+                    colorIndex = (colorIndex + 3) % 4;
                     $('#balloon').css({
                         'width': size + 'px',
                         'height': size + 'px',
@@ -59,7 +59,7 @@
             }
 
             $('#balloon').on('click', pump);
-            $('#balloon').on('mouseover', shrink);
+            $('#balloon').on('mouseleave', shrink);
         });
     </script>
 
